@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Decodificador</title>
+</head>
+<body class="bg-sky-50 min-h-screen scroll-smooth font-['Inter']">
+  <section class="flex min-h-screen justify-center lg:justify-center leading-7">
+    <div class="flex min-w-96 flex-col justify-around">
+      <header class="w-fit p-6">
+        <img src="./assets/alura.svg" alt="logo da alura" />
+      </header>
+      <textarea
+        class="min-h-64 resize-none overflow-hidden bg-sky-50 p-8
+        text-3xl lowercase caret-blue-800 outline-none
+                   placeholder:text-3xl placeholder:normal-case placeholder:text-blue-950"
+                   placeholder="Digite seu texto"
+                   ></textarea>
+                   <section class="flex flex-col items-center gap-16 p-6">
+        <div class="flex flex-col gap-1">
+          <div class="flex gap-1 text-xs">
+            <img src="./assets/alert.svg" alt="alerta" />
+            <p>Apenas letras minúsculas e sem acento.</p>
+          </div>
+          <div class="flex flex-col gap-6 md:flex-row">
+            <button class="w-80 rounded-3xl border-transparent
+            bg-blue-950 p-6 text-base text-white"
+            onclick="encrypt()">
+            Criptografar
+            </button>
+            <button class="w-80 rounded-3xl border border-blue-950 bg-sky-50 p-6 text-base"
+            onclick="decrypt()">
+              Descriptografar
+            </button>
+          </div>
+        </div>
+        <div class="min-w-full md:max-w-2xl max-w-xs text-pretty break-words flex-col items-center gap-4 rounded-3xl bg-white p-8 shadow-2xl lg:hidden">
+          <p class="mensagens lowercase text-center text-3xl font-extrabold text-gray-700">
+            Nenhuma mensagem encontrada
+          </p>
+          <p class="msg text-center text-xl font-normal text-gray-500">
+            Digite um texto que você deseja criptografar ou descriptografar.
+          </p>
+        </div>
+      </section>
+    </div>
+    <div
+    class="hidden w-1/4 flex-col justify-center items-stretch w-1/2 text-wrap
+                gap-4 rounded-3xl bg-white m-10 p-8 shadow-2xl lg:flex">
+      <img class="msg" src="./assets/diamond.svg" alt="Mensagem não encontrada" />          
+      <p class="mensagens lowercase text-pretty break-words	text-center text-3xl font-extrabold text-gray-700">
+        Nenhuma mensagem encontrada
+      </p>
+      <p class="msg text-center text-xl font-normal text-gray-500">
+        Digite um texto que você deseja criptografar ou descriptografar.
+      </p>
+    </div>
+  </section>
+  
+  <script src="script.js"></script>
+</body>
+</html>
